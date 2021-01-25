@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from "react";
 
-const Field = () => {
-    return (
-        <div className='ui field'>
-            <label htmlFor="">Name</label>
-            <input type="text"/>
-        </div>
-    )
-}
+import LanguageContext from "./contexts/LanguageContext";
 
-export default Field
+const Field = ({ language }) => {
+  const context = useContext(LanguageContext);
+
+  const text = context === 'English' ? 'Name' : 'Naam'
+  return (
+    <div className="ui field">
+      <label htmlFor="">{text}</label>
+      <input type="text" />
+    </div>
+  );
+};
+
+export default Field;
