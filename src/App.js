@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import UserCreate from "./UserCreate";
 
 const App = () => {
   const [language, setLanguage] = useState("English");
@@ -14,7 +15,7 @@ const App = () => {
         <i className="flag us" onClick={() => onLanguageChange("English")}></i>
         <i className="flag nl" onClick={() => onLanguageChange("Dutch")}></i>
       </div>
-      {language}
+      <UserCreate/>
     </div>
   );
 };
