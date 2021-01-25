@@ -2,10 +2,10 @@ import React from 'react'
 import Button from './Button';
 import Field from './Field';
 
-const UserCreate = ({language}) => {
+const UserCreate = () => {
     return(
         <div className='ui form'>
-            <Field  language={language}/>
+            <Field />
             <Button/>
         </div>
     )
